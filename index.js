@@ -1,20 +1,23 @@
 const express = require("express")
 const mongoose = require("mongoose")
 
+const app = express()
+
+
 // Models
 const TodoTask = require("./models/TodoTask")
-
-const app = express()
 
 app.use(express.static("public"))
 app.set("view engine", "ejs")
 app.use(express.urlencoded({extended: true}))
 
-//DB Config
-mongoose.connect('mongodb://localhost:27017/todo', {useNewUrlParser: true}, () => {
+// DB Config
+mongoose.connect('mongodb://mongo:27017', {useNewUrlParser: true}, () => {
 	console.log("Connected to DB")
-	app.listen(3000, ()=> console.log("Server Up and Running"))
+	//app.listen(3000, ()=> console.log("Server Up and Running"))
 })
+
+app.listen(3000, ()=> console.log("Server Up and Running"))
 
 
 app.get('/', (req, res) => {
