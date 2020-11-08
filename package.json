@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/teb510/to-do-k8s/issues"
   },
-  "homepage": "https://github.com/teb510/to-do-k8s#readme"
+  "homepage": "https://github.com/teb510/to-do-k8s#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
