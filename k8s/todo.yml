@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: todo
-        image: hectoroftroy/k8s-gitops
+        image: hectoroftroy/k8s-gitops:latest
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
