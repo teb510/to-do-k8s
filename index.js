@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}))
 
 // DB Config
 //Test
-mongoose.connect('mongodb://mongo:27017', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://mongodb:27017', {useNewUrlParser: true}, () => {
 	console.log("Connected to DB")
 	//app.listen(3000, ()=> console.log("Server Up and Running"))
 })
