@@ -3,6 +3,9 @@ const mongoose = require("mongoose")
 
 const app = express()
 
+function handleError(error){
+	console.log(error)
+}
 
 // Models
 const TodoTask = require("./models/TodoTask")
@@ -13,12 +16,21 @@ app.use(express.urlencoded({extended: true}))
 
 // DB Config
 //Test
-mongoose.connect('mongodb://mongodb:27017', {useNewUrlParser: true}, () => {
-	console.log("Connected to DB")
-	//app.listen(3000, ()=> console.log("Server Up and Running"))
-})
+// mongoose.connect('mongodb://db:27017', {useNewUrlParser: true}, () => {
+// 	console.log("Connected to DB")
+// 	//app.listen(3000, ()=> console.log("Server Up and Running"))
+// })
+
+mongoose.connect('mongodb://mongodb-svc:27017', { useNewUrlParser: true }).
+  catch(error => handleError(error));
+
 
 app.listen(3000, ()=> console.log("Server Up and Running"))
+
+
+// app.get('/', (req, res) => {
+// 	res.render(`<h1>hello world</h1>`)
+// })
 
 
 app.get('/', (req, res) => {

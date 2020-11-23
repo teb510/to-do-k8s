@@ -5,8 +5,8 @@ services:
     ports:
     - "8080:3000"
     depends_on:
-    - mongo
-  mongo:
+    - db
+  db:
     image: mongo
     ports:
     - "27017:27017"

@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo
+spec:
+  type: ClusterIP
+  ports:
+  - port: 3000
+    protocol: TCP
+  selector:
+    app: todo
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,7 +28,7 @@ spec:
     spec:
       containers:
       - name: todo
-        image: hectoroftroy/k8s-gitops:latest
+        image: hectoroftroy/k8s-gitops:1.8
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
