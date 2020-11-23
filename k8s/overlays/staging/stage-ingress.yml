@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+  - host: kustomize.tomscluste-tomfoolery-6ab199-16189242.hcp.westus.azmk8s.io
+    http:
+      paths:
+      - backend:
+          serviceName: todo
+          servicePort: 3000
+        path: /
