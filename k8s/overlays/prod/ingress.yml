@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
+  name: ingress
   annotations:
     kubernetes.io/ingress.class: addon-http-application-routing
-  name: ingress
 spec:
   rules:
   - host: kustomize.3cd80d1a9ec844598ced.westus.aksapp.io
