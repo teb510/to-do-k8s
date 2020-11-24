@@ -3,5 +3,8 @@ kind: Kustomization
 
 resources:
   - ingress.yml
-  - mongo.yml
-  - todo.yml
+  - mongo-statefulset.yml
+  - mongo-pvc.yml
+  - mongo-svc.yml
+  - todo-deployment.yml
+  - todo-svc.yml
