@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-  - host: kustomize.tomscluste-tomfoolery-6ab199-16189242.hcp.westus.azmk8s.io
+  - host: kustomize.895570096d084edebbdc.westus.aksapp.io
     http:
       paths:
       - backend:
